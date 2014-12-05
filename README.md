@@ -1,8 +1,11 @@
 NuitDeLInfo
 ===========
 
-This is a sample repository to host your source code.
+To test this project you have to import the ndi.sql file in your local database.
+And then clone the repository and go to the url : http://locahost/the_repo/ndi/
 
-### TODO
+The default user is :
+admin
+admin
 
-Please write a few lines about the technical side of your project and provide your login's. At the end of the challenge, please push your final submit on */master*.
+For more informations read the doky-sharky.pdf
