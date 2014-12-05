@@ -43,7 +43,7 @@ class AdminCentersController extends AppController{
 	public function edit($id)
 	{
 		$this->loadModel('Center');
-		$center = $this->Center->find('first', array('conditions' => array('id' => $id)));
+		$center = $this->Center->find('first', array('conditions' => array('Center.id' => $id)));
 		if (!$center)
 		{
 			$this->Session->setFlash('Center not found');
@@ -56,19 +56,13 @@ class AdminCentersController extends AppController{
 			$this->Center->set($this->request->data);
 			if($this->Center->validates())
 			{
-				$data = $this->request->data['Admincenter'];
-				$this->Center->create();
+				$data = $this->request->data['Center'];
+				$this->Center->id = $id;
 				$this->Center->save(array(
 					'name'     => $data['name'],
 					'city'     => $data['city'],
 					'country'  => $data['country'],
-					'address'  => $data['address'],
-					'type'	   => $data['type']
-				), false);
-				$this->AdminCenter->create();
-				$this->AdminCenter->save(array(
-					'user_id'     => $this->Auth->user('id'),
-					'center_id'   => $this->Center->id
+					'address'  => $data['address']
 				), false);
 				$this->Session->setFlash('Center created');
 				$this->redirect(array('controller' => 'users', 'action' => 'index'));
@@ -80,7 +74,7 @@ class AdminCentersController extends AppController{
 			}
 		}
 		else
-			$this->request->data = $center;
+			$this->data = $center;
 	}
 
 	public function manage()

@@ -13,9 +13,9 @@
 			<p>Description : <?php echo $center['Center']['description']; ?></p>
 		</div>
 		<div class="span5">
-			<p>City : <?php echo $center['Location']['city']; ?></p>
-			<p>Country : <?php echo $center['Location']['country']; ?></p>
-			<p>Address : <?php echo $center['Location']['address']; ?>
+			<p>City : <?php echo $center['Center']['city']; ?></p>
+			<p>Country : <?php echo $center['Center']['country']; ?></p>
+			<p>Address : <?php echo $center['Center']['address']; ?>
 		</div>
 	</div>
 </div>

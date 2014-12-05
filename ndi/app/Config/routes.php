@@ -54,6 +54,12 @@ Router::connect(
 	array('pass' => array('id', 'type'),'id' => '[0-9]+', 'type' => '[0-9]+')
 );
 
+Router::connect(
+	'/admincenters/edit/:id', 
+	array('controller' => 'admincenters', 'action' => 'edit'),
+	array('pass' => array('id'),'id' => '[0-9]+')
+);
+
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
