@@ -2,7 +2,13 @@
 	<h1><?php echo $user['User']['name']; ?></h1>
 	<div class="row">
 		<div class="span5">
-			<p>Description : <?php echo $user['User']['description']; ?></p>
+			<table class="table-collapsed">
+				<tr>
+					<td>
+				<p>Description : <?php echo $user['User']['description']; ?></p>
+			</td>
+			</tr>
+			</table>
 		</div>
 		<div class="span5">
 		</div>

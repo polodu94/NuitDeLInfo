@@ -7,17 +7,13 @@
     'complete' => $this->Js->get('#busy-indicator')->effect('fadeOut', array('buffer' => false)), // la c'est pour faire disparaitre l'element busy-indicator quand les données on été chargé
 )); ?>
 <div class="hero-unit">
-	<h1><?php echo $center['Center']['name']; ?></h1>
-	<div class="row">
-		<div class="span5">
-			<p>Description : <?php echo $center['Center']['description']; ?></p>
-		</div>
-		<div class="span5">
-			<p>City : <?php echo $center['Center']['city']; ?></p>
-			<p>Country : <?php echo $center['Center']['country']; ?></p>
-			<p>Address : <?php echo $center['Center']['address']; ?>
-		</div>
-	</div>
+	<table>
+			<tr><td>Name : <?php echo $center['Center']['name']; ?></td></tr>
+			<tr><td>Description : <?php echo $center['Center']['description']; ?></td></tr>
+			<tr><td>City : <?php echo $center['Center']['city']; ?></td></tr>
+			<tr><td>Country : <?php echo $center['Center']['country']; ?></td></tr>
+			<tr><td>Address : <?php echo $center['Center']['address']; ?></td></tr>
+	</table>
 </div>
 <?php if ($center['Center']['type'] == 1): ?>
 	<?php if(!empty($users)): ?>
@@ -25,12 +21,17 @@
 			<h1>Refugee</h1>
 		</div>
 		<div class="row">
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Action</th>
+					</tr>
 		<?php foreach($users as $user): ?>
-			<div class="span2">
-			    <h2><?php echo $user['User']['name']; ?></h2>
-			    <p>Description : <?php echo $user['User']['description']; ?></p>
-			    <div class="row">
-			    	<div class="span2">
+					<tr>
+			    <td><?php echo $user['User']['name']; ?></td>
+			    <td>Description : <?php echo $user['User']['description']; ?></td>
+			    <td>
 			    		<?php 
 			    			echo $this->Html->link(
 				    			'View', 
@@ -42,13 +43,13 @@
 				    			array('class' => 'btn')
 			    			); 
 			    		?>
-			    	</div>
-			    </div>
-		    </div>
+			    	</td>
+			    </tr>
 		<?php endforeach; ?>
+	</table>
 		</div>
 	<div class="pagination pagination-large pagination-centered">
-	    <ul>
+	    <ul class="pagination">
 	        <?php
 	        	echo $this->Paginator->first('< first', array('tag' => 'li'), null, array('tag' => 'li','class' => 'disabled','disabledTag' => 'a'));
 	            echo $this->Paginator->prev('prev', array('tag' => 'li'), null, array('tag' => 'li','class' => 'disabled','disabledTag' => 'a'));
