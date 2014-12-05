@@ -8,4 +8,4 @@ The default user is :
 admin
 admin
 
-For more informations read the doky-sharky.pdf
+For more informations read the Doky-Sharky.pdf
