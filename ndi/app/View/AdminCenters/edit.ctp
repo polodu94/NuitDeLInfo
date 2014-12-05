@@ -1,12 +1,36 @@
 <?php $this->assign('title', 'Edit center'); ?>
 <?php $this->Html->css('signin', array('inline' => false)); ?>
 <div class="container">
+		<?php $this->assign('title', 'Sign in'); ?>
+	<?php $this->Html->css('signin', array('inline' => false)); ?>
+	<div class="container">
+		<div class="form-box" id="login-box">
+			<div class="header">Edit center</div>
 	<?php echo $this->Form->create('Admincenter', array('type' => 'post', 'class' => 'form-signin')); ?>
-	<h2 class="form-signin-heading">Edit center</h2>
-	<?php echo $this->Form->input('Center.name', array('label' => 'Name', 'class' => 'input-block-lelvel')); ?>
-	<?php echo $this->Form->input('Center.city', array('label' => 'city', 'class' => 'input-block-lelvel')); ?>
-	<?php echo $this->Form->input('Center.country', array('label' => 'Country', 'class' => 'input-block-lelvel')); ?>
-	<?php echo $this->Form->input('Center.address', array('label' => 'Address', 'class' => 'input-block-lelvel')); ?>
-    <button class="btn btn-large btn-primary" type="submit">Edit this center</button>
-	<?php echo $this->Form->end(); ?>
+			<div class="body bg-gray">
+				<div class="form-group">
+					<?php echo $this->Form->input('Center.name', array('label' => false, 'class' => 'form-control', 'placeholder' => 'Name')); ?>
+				</div>
+			</div>
+			<div class="body bg-gray">
+				<div class="form-group">
+					<?php echo $this->Form->input('Center.city', array('label' => false, 'class' => 'form-control', 'placeholder' => 'City')); ?>
+				</div>
+			</div>
+			<div class="body bg-gray">
+				<div class="form-group">
+					<?php echo $this->Form->input('Center.country', array('label' => false, 'class' => 'form-control', 'placeholder' => 'Country')); ?>
+				</div>
+			</div>
+			<div class="body bg-gray">
+				<div class="form-group">
+					<?php echo $this->Form->input('Center.address', array('label' => false, 'class' => 'form-control', 'placeholder' => 'Address')); ?>
+				</div>
+			</div>
+			<div class="footer">  
+				<button class="btn bg-olive btn-block" type="submit">Edit</button>
+			</div>
+			<?php echo $this->Form->end(); ?>
+		</div>
+	</div>
 </div>
