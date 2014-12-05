@@ -9,3 +9,17 @@ admin
 admin
 
 For more informations read the Doky-Sharky.pdf
+
+Logins are :
+
+benass_p
+weiss_a
+ozarow_a
+plante_m
+lacroi_a
+nguye_h
+denis_h
+beisse_h
+piercq_t
+gay_a
+demon_b
